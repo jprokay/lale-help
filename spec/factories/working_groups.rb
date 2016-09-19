@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :working_group, aliases: [:public_working_group] do
     sequence(:name) {|n| "Group #{n}" }
+    sequence(:description) {|n| "Test Description #{n}"}
     circle
 
     transient do
@@ -47,6 +48,10 @@ FactoryGirl.define do
 
     trait :private do
       is_private true
+    end
+
+    trait :public do
+      is_private false
     end
 
   end

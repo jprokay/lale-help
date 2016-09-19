@@ -9,6 +9,10 @@ module PageObject
         elements :organizers, '.admins li'
       end
 
+      element :deactivate_button, 'a.button', text: 'Deactivate'
+      element :delete_button, 'a.button', text: 'Delete'
+      element :edit_button, 'a.button-primary', text: 'Edit'
+      element :reactivate_button, 'a.button', text: 'Reactivate'
     end
   end
 end
